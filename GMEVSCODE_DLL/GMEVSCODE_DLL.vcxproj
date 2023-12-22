@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e65a123c-a336-4bfb-9066-ab4cba5bf234}</ProjectGuid>
+    <RootNamespace>GMEVSCODEDLL</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\SDL\lib\x86;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>C:\SDL\lib\x86;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\SDL\lib\x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>C:\SDL\lib\x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SDL_MAIN_HANDLED;WIN32;_DEBUG;GMEVSCODEDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);SDL_MAIN_HANDLED</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.8.0_251\include;C:\SDL\include;C:\Program Files (x86)\Java\jdk1.8.0_251\include\win32</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4146;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SDL_MAIN_HANDLED;WIN32;NDEBUG;GMEVSCODEDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);SDL_MAIN_HANDLED</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\SDL\include;C:\Program Files (x86)\Java\jdk1.8.0_251\include;C:\Program Files (x86)\Java\jdk1.8.0_251\include\win32</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4146;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SDL_MAIN_HANDLED;_DEBUG;GMEVSCODEDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);SDL_MAIN_HANDLED</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Java\jdk1.8.0_251\include;C:\SDL\include;C:\Program Files (x86)\Java\jdk1.8.0_251\include\win32</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4146;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SDL_MAIN_HANDLED;NDEBUG;GMEVSCODEDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);SDL_MAIN_HANDLED</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\SDL\include;C:\Program Files (x86)\Java\jdk1.8.0_251\include;C:\Program Files (x86)\Java\jdk1.8.0_251\include\win32</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4146;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="me_pk2_rpg_game_sound_nes_NintendoSoundSystem.h" />
+    <ClInclude Include="player\gme\Ay_Apu.h" />
+    <ClInclude Include="player\gme\Ay_Cpu.h" />
+    <ClInclude Include="player\gme\Ay_Emu.h" />
+    <ClInclude Include="player\gme\blargg_common.h" />
+    <ClInclude Include="player\gme\blargg_config.h" />
+    <ClInclude Include="player\gme\blargg_endian.h" />
+    <ClInclude Include="player\gme\blargg_source.h" />
+    <ClInclude Include="player\gme\Blip_Buffer.h" />
+    <ClInclude Include="player\gme\Classic_Emu.h" />
+    <ClInclude Include="player\gme\Data_Reader.h" />
+    <ClInclude Include="player\gme\Dual_Resampler.h" />
+    <ClInclude Include="player\gme\Effects_Buffer.h" />
+    <ClInclude Include="player\gme\Fir_Resampler.h" />
+    <ClInclude Include="player\gme\Gbs_Emu.h" />
+    <ClInclude Include="player\gme\Gb_Apu.h" />
+    <ClInclude Include="player\gme\Gb_Cpu.h" />
+    <ClInclude Include="player\gme\gb_cpu_io.h" />
+    <ClInclude Include="player\gme\Gb_Oscs.h" />
+    <ClInclude Include="player\gme\gme.h" />
+    <ClInclude Include="player\gme\Gme_File.h" />
+    <ClInclude Include="player\gme\Gym_Emu.h" />
+    <ClInclude Include="player\gme\Hes_Apu.h" />
+    <ClInclude Include="player\gme\Hes_Cpu.h" />
+    <ClInclude Include="player\gme\hes_cpu_io.h" />
+    <ClInclude Include="player\gme\Hes_Emu.h" />
+    <ClInclude Include="player\gme\Kss_Cpu.h" />
+    <ClInclude Include="player\gme\Kss_Emu.h" />
+    <ClInclude Include="player\gme\Kss_Scc_Apu.h" />
+    <ClInclude Include="player\gme\M3u_Playlist.h" />
+    <ClInclude Include="player\gme\Multi_Buffer.h" />
+    <ClInclude Include="player\gme\Music_Emu.h" />
+    <ClInclude Include="player\gme\Nes_Apu.h" />
+    <ClInclude Include="player\gme\Nes_Cpu.h" />
+    <ClInclude Include="player\gme\nes_cpu_io.h" />
+    <ClInclude Include="player\gme\Nes_Fme7_Apu.h" />
+    <ClInclude Include="player\gme\Nes_Namco_Apu.h" />
+    <ClInclude Include="player\gme\Nes_Oscs.h" />
+    <ClInclude Include="player\gme\Nes_Vrc6_Apu.h" />
+    <ClInclude Include="player\gme\Nsfe_Emu.h" />
+    <ClInclude Include="player\gme\Nsf_Emu.h" />
+    <ClInclude Include="player\gme\Sap_Apu.h" />
+    <ClInclude Include="player\gme\Sap_Cpu.h" />
+    <ClInclude Include="player\gme\sap_cpu_io.h" />
+    <ClInclude Include="player\gme\Sap_Emu.h" />
+    <ClInclude Include="player\gme\Sms_Apu.h" />
+    <ClInclude Include="player\gme\Sms_Oscs.h" />
+    <ClInclude Include="player\gme\Snes_Spc.h" />
+    <ClInclude Include="player\gme\Spc_Cpu.h" />
+    <ClInclude Include="player\gme\Spc_Dsp.h" />
+    <ClInclude Include="player\gme\Spc_Emu.h" />
+    <ClInclude Include="player\gme\Vgm_Emu.h" />
+    <ClInclude Include="player\gme\Vgm_Emu_Impl.h" />
+    <ClInclude Include="player\gme\Ym2413_Emu.h" />
+    <ClInclude Include="player\gme\Ym2612_Emu.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="player\Audio_Scope.h" />
+    <ClInclude Include="player\Music_Player.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="me_pk2_rpg_game_sound_nes_NintendoSoundSystem.cpp" />
+    <ClCompile Include="player\gme\Ay_Apu.cpp" />
+    <ClCompile Include="player\gme\Ay_Cpu.cpp" />
+    <ClCompile Include="player\gme\Ay_Emu.cpp" />
+    <ClCompile Include="player\gme\Blip_Buffer.cpp" />
+    <ClCompile Include="player\gme\Classic_Emu.cpp" />
+    <ClCompile Include="player\gme\Data_Reader.cpp" />
+    <ClCompile Include="player\gme\Dual_Resampler.cpp" />
+    <ClCompile Include="player\gme\Effects_Buffer.cpp" />
+    <ClCompile Include="player\gme\Fir_Resampler.cpp" />
+    <ClCompile Include="player\gme\Gbs_Emu.cpp" />
+    <ClCompile Include="player\gme\Gb_Apu.cpp" />
+    <ClCompile Include="player\gme\Gb_Cpu.cpp" />
+    <ClCompile Include="player\gme\Gb_Oscs.cpp" />
+    <ClCompile Include="player\gme\gme.cpp" />
+    <ClCompile Include="player\gme\Gme_File.cpp" />
+    <ClCompile Include="player\gme\Gym_Emu.cpp" />
+    <ClCompile Include="player\gme\Hes_Apu.cpp" />
+    <ClCompile Include="player\gme\Hes_Cpu.cpp" />
+    <ClCompile Include="player\gme\Hes_Emu.cpp" />
+    <ClCompile Include="player\gme\Kss_Cpu.cpp" />
+    <ClCompile Include="player\gme\Kss_Emu.cpp" />
+    <ClCompile Include="player\gme\Kss_Scc_Apu.cpp" />
+    <ClCompile Include="player\gme\M3u_Playlist.cpp" />
+    <ClCompile Include="player\gme\Multi_Buffer.cpp" />
+    <ClCompile Include="player\gme\Music_Emu.cpp" />
+    <ClCompile Include="player\gme\Nes_Apu.cpp" />
+    <ClCompile Include="player\gme\Nes_Cpu.cpp" />
+    <ClCompile Include="player\gme\Nes_Fme7_Apu.cpp" />
+    <ClCompile Include="player\gme\Nes_Namco_Apu.cpp" />
+    <ClCompile Include="player\gme\Nes_Oscs.cpp" />
+    <ClCompile Include="player\gme\Nes_Vrc6_Apu.cpp" />
+    <ClCompile Include="player\gme\Nsfe_Emu.cpp" />
+    <ClCompile Include="player\gme\Nsf_Emu.cpp" />
+    <ClCompile Include="player\gme\Sap_Apu.cpp" />
+    <ClCompile Include="player\gme\Sap_Cpu.cpp" />
+    <ClCompile Include="player\gme\Sap_Emu.cpp" />
+    <ClCompile Include="player\gme\Sms_Apu.cpp" />
+    <ClCompile Include="player\gme\Snes_Spc.cpp" />
+    <ClCompile Include="player\gme\Spc_Cpu.cpp" />
+    <ClCompile Include="player\gme\Spc_Dsp.cpp" />
+    <ClCompile Include="player\gme\Spc_Emu.cpp" />
+    <ClCompile Include="player\gme\Vgm_Emu.cpp" />
+    <ClCompile Include="player\gme\Vgm_Emu_Impl.cpp" />
+    <ClCompile Include="player\gme\Ym2413_Emu.cpp" />
+    <ClCompile Include="player\gme\Ym2612_Emu.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="player\Audio_Scope.cpp" />
+    <ClCompile Include="player\Music_Player.cpp" />
+    <ClCompile Include="player\player.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
